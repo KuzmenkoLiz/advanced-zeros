@@ -3,11 +3,12 @@ module.exports = function getZerosCount(number, base) {
   /**/
   var zerosCount = 0;
   
-  for (var i = 0; i < base; i++) {
-    numbe = Math.floor(number/Math.pow(num, i));
-    zerosCount += numbe;
+  while(number){
+    for (var i = 0; i < base; i++) {
+      number = Math.floor(number/Math.pow(5, i));
+      zerosCount += number;
+    }
   }
-  
   return zerosCount;
 
 }
